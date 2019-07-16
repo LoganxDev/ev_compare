@@ -1,0 +1,3 @@
+CREATE DATABASE evs_prod;
+CREATE DATABASE evs_dev;
+CREATE DATABASE evs_test;

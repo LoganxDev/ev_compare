@@ -1,0 +1,4 @@
+ev_env
+.dockerignore
+Dockerfile
+Dockerfile-prod
