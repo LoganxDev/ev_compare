@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddEV renders a  snapshot properly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="field"
+  >
+    <input
+      className="input is-large"
+      name="make"
+      placeholder="Enter vehicle make"
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <input
+      className="input is-large"
+      name="brand"
+      placeholder="Enter vehicle brand"
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <input
+      className="input is-large"
+      name="base_price"
+      placeholder="Enter vehicle base price"
+      required={true}
+      type="text"
+    />
+  </div>
+  <div
+    className="field"
+  >
+    <input
+      className="input is-large"
+      name="storage"
+      placeholder="Enter vehicle storage"
+      required={true}
+      type="text"
+    />
+  </div>
+  <input
+    className="button is-primary is-large is-fullwidth"
+    type="submit"
+    value="Submit"
+  />
+</form>
+`;

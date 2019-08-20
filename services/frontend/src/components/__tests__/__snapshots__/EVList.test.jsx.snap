@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EVList renders a snapshot correctly 1`] = `
+<div>
+  <h4
+    className="box title is-4"
+  >
+    Tesla
+    Model 3
+  </h4>
+  <h4
+    className="box title is-4"
+  >
+    Tesla
+    Model S
+  </h4>
+</div>
+`;
