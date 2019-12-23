@@ -4,9 +4,9 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import axios from 'axios';
 
-import EVList from './components/EVList';
-// import AddEV from './components/AddEV';
-import EVCards from './components/EVCards';
+import EVCards from './components/ev-containers/EVCards';
+import ListNav from './components/layout/ListNav';
+import Navbar from "./components/layout/Navbar";
 
 class App extends Component {
     constructor() {
@@ -35,28 +35,6 @@ class App extends Component {
         });
     }
 
-    // addEV(event) {
-    //     event.preventDefault();
-    //     const evData = {
-    //         make: this.state.make,
-    //         brand: this.state.brand,
-    //         base_price: this.state.base_price,
-    //         storage: this.state.storage
-    //     }
-    //     axios.post(`${process.env.REACT_APP_EVS_SERVICE_URL}/evs`, evData)
-    //     .then((res) => {
-    //         this.getEvs();
-    //         this.setState({
-    //             make: '',
-    //             brand: '',
-    //             base_price: 0,
-    //             storage: 0,
-    //         });
-    //         console.log(res)
-    //     })
-    //     .catch((err) => {console.log(err)})
-    // };
-
     handleChange(event) {
         const obj = {};
         obj[event.target.name] = event.target.value;
@@ -65,18 +43,19 @@ class App extends Component {
 
     render() {
         return (
-            <section className="section">
-                <div className="container">
-                    <div className="columns center">
-                        <div className="column is-one-third">
-                            <br />
-                            <h1 className="title is-1">EV Compare</h1>
-                            <br /><br />
-                            <EVCards evs={this.state.evs}/>
+            <div className="app">
+                <Navbar />
+                <section className="main-section">
+                    <div className="container">
+                        <ListNav />
+                        <div className="columns center">
+                            <div className="column is-two-thirds">
+                                <EVCards evs={this.state.evs}/>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         )
     }
 };

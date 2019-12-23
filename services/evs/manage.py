@@ -47,6 +47,7 @@ def recreate_db():
 def seed_db():
     """Seeds the database."""
     db.session.add(EV('Model 3','Tesla', [], 35000, 42, []))
+    db.session.add(EV('i3','BMW', [], 44450, 30, []))
     db.session.add(EV('Model S','Tesla', [], 75000, 30, []))
     db.session.commit()
 
