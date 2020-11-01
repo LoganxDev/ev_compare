@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.8'
 
 services:
 
@@ -30,6 +30,7 @@ services:
       - APP_SETTINGS=project.config.DevelopmentConfig
       - DATABASE_URL=postgres://postgres:postgres@evs-db:5432/evs_dev
       - DATABASE_TEST_URL=postgres://postgres:postgres@evs-db:5432/evs_test
+    entrypoint: ./entrypoint.sh
     depends_on:
       - evs-db
 
