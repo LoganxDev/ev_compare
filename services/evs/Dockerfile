@@ -1,10 +1,10 @@
 # base image
-FROM python:3.7.2-alpine
+FROM python:3.8.6-alpine
 
 # new
 # install dependencies
 RUN apk update && \
-    apk add --virtual build-deps gcc python-dev musl-dev && \
+    apk add --virtual build-deps gcc python3-dev musl-dev && \
     apk add postgresql-dev && \
     apk add netcat-openbsd
 
@@ -22,7 +22,3 @@ RUN chmod +x /usr/src/app/entrypoint.sh
 
 # add app
 COPY . /usr/src/app
-
-# new
-# run server
-CMD ["/usr/src/app/entrypoint.sh"]
